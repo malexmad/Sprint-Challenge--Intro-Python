@@ -85,18 +85,18 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # the specified coordinates.
 
   if lat1 > lat2:
-    maxlat = lat1
-    minlat = lat2
+    maxlat = float(lat1)
+    minlat = float(lat2)
   else:
-    maxlat = lat2
-    minlat = lat1
+    maxlat = float(lat2)
+    minlat = float(lat1)
 
   if lon1 > lon2:
-    maxlon = lon1
-    minlon = lon2
+    maxlon = float(lon1)
+    minlon = float(lon2)
   else:
-    maxlon = lon2
-    minlon = lon1
+    maxlon = float(lon2)
+    minlon = float(lon1)
 
   for citie in cities:
     if maxlat >= citie.lat >= minlat and maxlon >= citie.lon >= minlon:
